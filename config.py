@@ -168,9 +168,9 @@ class Config:
                     )
                 except:
                     pass
-            if(self.device!="cpu"):
+            if self.device != "cpu":
                 import torch_directml
-    
+
                 self.device = torch_directml.device(torch_directml.default_device())
                 self.is_half = False
         else:
